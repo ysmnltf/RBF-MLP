@@ -1,6 +1,6 @@
-# Implementing and Comparing MLP and RBF
+# RFB Implementation
 
-Sampling x's and y's and train them using Multi-layer Perceptron and Radial Basis Functions.
+Collected data points (x, y pairs) and training on them with both Multi-layer Perceptron (MLP) and Radial Basis Functions (RBF) networks for analysis and comparison.
 
 ## Equation
 
@@ -40,7 +40,7 @@ To find RBF layer centers, two methods are used:
 1. K-Means clustering
 2. a Gaussian mixture model probability distribution
 
-Radius is found by finding the maximum distance between each two centers.
+The radius is found by finding the maximum distance between each two centers.
 
 # Results
 
