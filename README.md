@@ -1,13 +1,10 @@
-# RFB Implementation
-
-Collected data points (x, y pairs) and training on them with both Multi-layer Perceptron (MLP) and Radial Basis Functions (RBF) networks for analysis and comparison.
-
-## Equation
-
-$$y = 1/3 + 0.5.sin(3x.π) + μ\\0 < x < 1\\−0.7 < μ < 0.7$$
+This repository contains the implementation and training of a Radial Basis Function (RBF) network on a dataset. The results are then compared with those obtained from an MLP implemented with Keras.
 
 # Dataset
 
+The dataset is generated using the following equation:
+$$y = \frac{1}{3} + 0.5 \cdot \sin(3x\pi) + \mu \quad \text{for} \quad 0 < x < 1 \quad \text{and} \quad -0.7 < \mu < 0.7$$
+<div align="center">
 <table class="tg">
 <tbody>
 <tr>
@@ -21,11 +18,23 @@ $$y = 1/3 + 0.5.sin(3x.π) + μ\\0 < x < 1\\−0.7 < μ < 0.7$$
 </p></td></tr>
 </tbody>
 </table>
+</div>
 
-# Training
+
+# Implementations
+
+## RFB
+
+### Centers
+To find RBF layer centers, two methods are used:
+
+1. K-Means clustering
+2. a Gaussian mixture model probability distribution
+
+### Radius
+The radius is found by finding the maximum distance between each two centers.
 
 ## MLP
-
 To implement MLP, keras library is used.
 
 - Model architecture
@@ -33,17 +42,9 @@ To implement MLP, keras library is used.
 <img src="./images/mlp-arch.png">
 </p>
 
-## RBF
-
-To find RBF layer centers, two methods are used:
-
-1. K-Means clustering
-2. a Gaussian mixture model probability distribution
-
-The radius is found by finding the maximum distance between each two centers.
 
 # Results
-
+<div align="center">
 <table class="tg">
 <tbody>
 <tr>
@@ -57,3 +58,4 @@ The radius is found by finding the maximum distance between each two centers.
 </p></td></tr>
 </tbody>
 </table>
+</div>
